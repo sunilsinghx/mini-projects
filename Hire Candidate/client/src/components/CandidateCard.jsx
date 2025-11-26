@@ -4,10 +4,15 @@ import { useCandidate } from "../context/CandidateProvider";
 const CandidateCard = ({ candidate }) => {
   const [showHired, setShowHired] = useState(false);
 
-  const { hireCandidate, hired } = useCandidate();
+  const { hireCandidate, hired, UnHireCandidate } = useCandidate();
 
-  async function onHireSuccess(id) {
-    if (showHired || candidate.isHired || hired?.length >= 5) return;
+  async function onHandleClick(id) {
+    if (hired?.length >= 5) return;
+
+    if (showHired || candidate.isHired) {
+      UnHireCandidate(id);
+      showHired(false);
+    }
 
     const res = await hireCandidate(id);
 
@@ -52,7 +57,7 @@ const CandidateCard = ({ candidate }) => {
         className={`px-5 py-2 rounded mt-4 text-white hover:bg-indigo-600 ${
           showHired || candidate.isHired ? "bg-green-500" : "bg-indigo-500"
         }`}
-        onClick={() => onHireSuccess(candidate.id)}
+        onClick={() => onHandleClick(candidate.id)}
       >
         {showHired || candidate.isHired ? "Hired" : "Hire"}
       </button>

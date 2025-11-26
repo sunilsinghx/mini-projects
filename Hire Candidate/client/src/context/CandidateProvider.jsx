@@ -8,7 +8,9 @@ export default function CandidateProvider({ children } = {}) {
 
   async function getCandidates() {
     try {
-      const res = await (await fetch(`${import.meta.env.VITE_BACKEND_URL}`)).json();
+      const res = await (
+        await fetch(`${import.meta.env.VITE_BACKEND_URL}`)
+      ).json();
 
       setCandidates(res.candidates);
     } catch (error) {
@@ -52,47 +54,71 @@ export default function CandidateProvider({ children } = {}) {
 
   async function getSelectedCandidates() {
     try {
-      const res = await (await fetch(`${import.meta.env.VITE_BACKEND_URL}/selected`)).json()
-      if (res?.candidates){
-        setHired(res.candidates)
+      const res = await (
+        await fetch(`${import.meta.env.VITE_BACKEND_URL}/selected`)
+      ).json();
+      if (res?.candidates) {
+        setHired(res.candidates);
       }
-
-
     } catch (error) {
-     console.log("error",error);
-      
+      console.log("error", error);
     }
-    
   }
 
   async function hireCandidate(id) {
     try {
-      const res =  await (await fetch(`${import.meta.env.VITE_BACKEND_URL}`,{
-        method:"POST",
-        headers:{
-          "Content-Type": "application/json", 
-          
-        },
-        body:JSON.stringify({id})
-      })).json()
+      const res = await (
+        await fetch(`${import.meta.env.VITE_BACKEND_URL}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id }),
+        })
+      ).json();
 
       if (res?.success) {
         await getSelectedCandidates();
       }
-      return res
-
+      return res;
     } catch (error) {
-      console.log("Error",error);
-      
+      console.log("Error", error);
+    }
+  }
+  async function UnHireCandidate(id) {
+    try {
+      const res = await (
+        await fetch(`${import.meta.env.VITE_BACKEND_URL}/unhire`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id }),
+        })
+      ).json();
+
+      if (res?.success) {
+        await getSelectedCandidates();
+      }
+      return res;
+    } catch (error) {
+      console.log("Error", error);
     }
   }
 
-
-  
-
   return (
     <candidateContext.Provider
-      value={{ candidates, getCandidates, filterCandidate, setCandidates,getSelectedCandidates,hireCandidate,hired,setHired }}
+      value={{
+        candidates,
+        getCandidates,
+        filterCandidate,
+        setCandidates,
+        getSelectedCandidates,
+        hireCandidate,
+        hired,
+        setHired,
+        UnHireCandidate,
+      }}
     >
       {children}
     </candidateContext.Provider>

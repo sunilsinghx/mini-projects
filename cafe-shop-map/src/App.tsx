@@ -2,6 +2,7 @@ import { useState } from "react";
 import cafesData from "./data/cafe.json";
 import "./App.css";
 import { LatLngExpression } from "leaflet";
+import 'leaflet/dist/leaflet.css';
 import { CafeList } from "./components/CafeList";
 import MapView from "./components/MapView";
 

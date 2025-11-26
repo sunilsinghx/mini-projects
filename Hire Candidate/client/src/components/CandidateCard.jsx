@@ -11,7 +11,8 @@ const CandidateCard = ({ candidate }) => {
 
     if (showHired || candidate.isHired) {
       UnHireCandidate(id);
-      showHired(false);
+      setShowHired(false);
+      return;
     }
 
     const res = await hireCandidate(id);

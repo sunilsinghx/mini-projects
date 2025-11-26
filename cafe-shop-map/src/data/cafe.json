@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Cafe Goodluck",
+    "lat": 18.5196,
+    "lng": 73.8415
+  },
+  {
+    "id": 2,
+    "name": "Cafe Kathaa",
+    "lat": 18.5182,
+    "lng": 73.8408
+  },
+  {
+    "id": 3,
+    "name": "11 East Street Cafe",
+    "lat": 18.5203,
+    "lng": 73.8473
+  },
+  {
+    "id": 4,
+    "name": "German Bakery – Koregaon Park",
+    "lat": 18.5398,
+    "lng": 73.8874
+  },
+  {
+    "id": 5,
+    "name": "Vohuman Cafe",
+    "lat": 18.5250,
+    "lng": 73.8520
+  },
+  {
+    "id": 6,
+    "name": "Zen Cafe – Koregaon Park",
+    "lat": 18.5360,
+    "lng": 73.8880
+  },
+  {
+    "id": 7,
+    "name": "Waari Book Cafe – Kothrud",
+    "lat": 18.5060,
+    "lng": 73.8050
+  },
+  {
+    "id": 8,
+    "name": "Cafe Peter – Viman Nagar",
+    "lat": 18.5690,
+    "lng": 73.9110
+  },
+  {
+    "id": 9,
+    "name": "It’s Street Coffee – Deccan Gymkhana",
+    "lat": 18.5160,
+    "lng": 73.8420
+  },
+  {
+    "id": 10,
+    "name": "Coffee Nation – Erandwane",
+    "lat": 18.5070,
+    "lng": 73.8300
+  }
+]

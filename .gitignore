@@ -1,0 +1,26 @@
+cafe-shop-map/node_modules
+cafe-shop-map/cert.*
+cafe-shop-map/*.png
+
+Hire Candidate/client/node_modules
+Hire Candidate/server/node_modules
+Hire Candidate/*.png
+Hire Candidate/*.txt
+
+Quiz App/client/.env
+Quiz App/client/node_modules
+Quiz App/server/node_modules
+Quiz App/server/.env
+Quiz App/*.png
+
+stopwatch/node_modules
+stopwatch/*.png
+
+tag-inputs-react/node_modules
+
+tick-tac-toe/node_modules
+
+weather-app/node_modules
+weather-app/.env
+weather-app/*.png
+

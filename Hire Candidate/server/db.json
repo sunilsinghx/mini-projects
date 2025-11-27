@@ -84,7 +84,7 @@
         "Docker",
         "Microservices"
       ],
-      "isHired": true,
+      "isHired": false,
       "diversityScore": 20
     },
     {
@@ -195,7 +195,7 @@
         "PHP",
         "Node JS"
       ],
-      "isHired": true,
+      "isHired": false,
       "diversityScore": 44
     },
     {
@@ -283,7 +283,7 @@
         ]
       },
       "skills": [],
-      "isHired": true,
+      "isHired": false,
       "diversityScore": 13
     },
     {
@@ -352,7 +352,7 @@
         "Kafka",
         "Angular"
       ],
-      "isHired": true,
+      "isHired": false,
       "diversityScore": 28.5
     },
     {
@@ -412,7 +412,7 @@
         "MongoDB",
         "GraphQL"
       ],
-      "isHired": true,
+      "isHired": false,
       "diversityScore": 16
     }
   ]

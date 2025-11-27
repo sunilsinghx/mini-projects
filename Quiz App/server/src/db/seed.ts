@@ -2,6 +2,9 @@
 import prisma from "./db.js";
 
 async function main() {
+  await prisma.question.deleteMany({});
+  console.log("🗑️ Existing questions deleted.");
+  
   const questions = [
     {
       text: "What is the capital of France?",

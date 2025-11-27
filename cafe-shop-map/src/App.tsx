@@ -20,13 +20,6 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
 
 interface Cafe {
   id: number;
